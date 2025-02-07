@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"techshift_1\",\n    \"password\": \"yourPass\",\n    \"email\": \"user_1@techshift.com\"\n}\n",
+					"raw": "{\n    \"username\": \"techshift_1\",\n    \"password\": \"yourPass\",\n    \"email\": \"user_2@techshift.com\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
