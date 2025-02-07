@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "01f5838b-cd08-452c-a9a4-a2dce451f673",
+		"name": "TechShift Event App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3673689"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"techshift_1\",\n    \"password\": \"yourPass\",\n    \"email\": \"user_1@techshift.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user_1@techshift.com\",\n    \"password\": \"yourPass\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Event Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidXNlcl8xQHRlY2hzaGlmdC5jb20iLCJpYXQiOjE3Mzg5NTcwNjIsImV4cCI6MTczOTA0MzQ2Mn0.-ql2EtgEXEY1jBSszPVNX2kM2Yr7jQfC7n8vlw-_TqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Annual Company Meeting",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "A meeting to discuss the team's annual performance",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2025-02-08T10:00:00Z",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/levioza/Desktop/techshift-practical-debugging-for-modern-web-applications/resources/events_pictures/event_1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/events/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single event",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Event",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidXNlcl8xQHRlY2hzaGlmdC5jb20iLCJpYXQiOjE3Mzg5NTcwNjIsImV4cCI6MTczOTA0MzQ2Mn0.-ql2EtgEXEY1jBSszPVNX2kM2Yr7jQfC7n8vlw-_TqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Annual Company Meeting",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "A meeting to discuss the team's annual performance",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2025-02-08T10:00:00Z",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/levioza/Desktop/techshift-practical-debugging-for-modern-web-applications/resources/events_pictures/event_1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/events/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidXNlcl8xQHRlY2hzaGlmdC5jb20iLCJpYXQiOjE3Mzg5NTcwNjIsImV4cCI6MTczOTA0MzQ2Mn0.-ql2EtgEXEY1jBSszPVNX2kM2Yr7jQfC7n8vlw-_TqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
